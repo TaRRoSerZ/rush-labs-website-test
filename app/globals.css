@@ -237,7 +237,7 @@ section.info-section h4 {
 div.info-section-title-container {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   padding-left: 1rem;
   width: 95%;
   margin-top: 100px;
@@ -365,7 +365,7 @@ div.case-cards-container {
 
 div.header-case-card {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -725,7 +725,7 @@ section.info-section h4 {
 div.info-section-title-container {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   padding-left: 1rem;
   width: 95%;
   margin-top: 100px;
@@ -847,7 +847,7 @@ div.case-cards-container {
 
 div.header-case-card {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -1036,7 +1036,7 @@ footer p {
     width: 95%;
     max-width: none;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
   }
 

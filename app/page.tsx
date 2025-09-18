@@ -1,6 +1,5 @@
 "use client";
 
-import { relative } from "path";
 import { useState } from "react";
 
 export default function Home() {
@@ -209,10 +208,10 @@ export default function Home() {
 					</div>
 					<div className="comment">
 						<p>
-							"They are very reactive and make sure to share their point of view
-							in order to improve the project in a very collaborative mindset.
-							They know the business and understand it in order to be a partner
-							in the development of the plateform."
+							&ldquo;They are very reactive and make sure to share their point
+							of view in order to improve the project in a very collaborative
+							mindset. They know the business and understand it in order to be a
+							partner in the development of the plateform.&rdquo;
 						</p>
 
 						<p className="comment-author">Auriane Gillet</p>
@@ -296,10 +295,10 @@ export default function Home() {
 			</section>
 			<section className="booking-section">
 				<div className="booking-section-container">
-					<h2>Let's work together.</h2>
+					<h2>Let&apos;s work together.</h2>
 					<p>
 						Your enterprise needs high-quality digital solutions, delivered at
-						speed. Let's discuss turning your next big project into
+						speed. Let&apos;s discuss turning your next big project into
 						production-ready reality faster than you thought possible..
 					</p>
 					<div className="main-cta-btn" id="bottom-cta">
