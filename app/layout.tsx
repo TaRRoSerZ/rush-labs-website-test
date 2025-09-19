@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "./modules/globals.css";
 
 export const metadata: Metadata = {
 	title: "Rush Labs | A mobile and web agency",

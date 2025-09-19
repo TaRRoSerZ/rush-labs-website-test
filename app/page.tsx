@@ -1,6 +1,52 @@
 "use client";
 
 import { useState } from "react";
+import CaseCard from "./components/CaseCard";
+import InfosCard from "./components/InfosCard";
+
+const caseCardContent = [
+	{
+		img: "/logos/mypop_logo.svg",
+		figcaption: "Fullstack",
+		year: "2024",
+		title:
+			"MyPop: A Modern, Automated, Self-Service Car Rental Platform for Flexible Mobility",
+		description:
+			"We collaborated with MyPop, a Belgian car rental service focused on flexible, long-term rentals, to develop a cutting-edge web platform that redefines the car rental experience. This solution empowers users with self-service subscriptions, integrates seamlessly with car delivery APIs, and provides real-time vehicle tracking through sensor data. Built with a custom vanilla Node.js and TypeScript backend and a Next.js frontend powered by Prismic, the platform also introduces an innovative OCR and AI-driven fine management system. An admin back office equips MyPop’s team with robust tools to oversee subscriptions, fleet management, and operations.",
+	},
+	{
+		img: "/logos/taxis_verts_logo.svg",
+		figcaption: "Mobile",
+		year: "2023",
+		title:
+			"Collecto App Revamp: A Modern Shared Taxi Solution in Just Two Weeks",
+		description:
+			"We teamed up with Taxi Verts and the Brussels government to rebuild the Collecto app from the ground up, delivering a modernized shared taxi service for Brussels residents. In an ambitious two-week timeline, we transformed the app with a fresh design, in-app payments, and enhanced functionality, elevating its App Store rating from 2 stars to 4.6 stars.",
+	},
+	{
+		img: "/logos/mypop_logo.svg",
+		figcaption: "AI",
+		year: "2021",
+		title: "Vehicle Fine Processing Automation",
+		description:
+			"Developed an automated fine-processing system that transforms time-consuming manual work into an instant process. Using Google Vision and OpenAI, the solution automatically extracts key data (license plates, dates, amounts) from PDF fines and matches them with the correct vehicle renters, enabling immediate fine forwarding while maintaining high accuracy.",
+	},
+];
+
+const infosCardContent = [
+	{
+		h4: "🚀 Accelerated Time-to-Market",
+		p: "From concept to production in weeks, not months. Our rapid delivery approach keeps you ahead of market demands.",
+	},
+	{
+		h4: "🧩 Seamless Integration",
+		p: "Your new solutions working flawlessly with existing systems. We handle complex enterprise integrations while maintaining security and performance.",
+	},
+	{
+		h4: "🏛️ Proven Enterprise Partner",
+		p: "Trusted by leading Belgian companies for mission-critical solutions. We understand what it takes to deliver at enterprise scale.",
+	},
+];
 
 export default function Home() {
 	const [open, setOpen] = useState(false);
@@ -107,29 +153,9 @@ export default function Home() {
 					</h4>
 				</div>
 				<div className="cards-container">
-					<div className="card">
-						<h4>🚀 Accelerated Time-to-Market</h4>
-						<p>
-							From concept to production in weeks, not months. Our rapid
-							delivery approach keeps you ahead of market demands.
-						</p>
-					</div>
-					<div className="card">
-						<h4>🧩 Seamless Integration</h4>
-						<p>
-							Your new solutions working flawlessly with existing systems. We
-							handle complex enterprise integrations while maintaining security
-							and performance.
-						</p>
-					</div>
-					<div className="card">
-						<h4>🏛️ Proven Enterprise Partner</h4>
-						<p>
-							Trusted by leading Belgian companies for mission-critical
-							solutions. We understand what it takes to deliver at enterprise
-							scale.
-						</p>
-					</div>
+					{infosCardContent.map((item, index) => (
+						<InfosCard key={index} h4={item.h4} p={item.p} />
+					))}
 				</div>
 			</section>
 			<section className="comment-section">
@@ -222,75 +248,16 @@ export default function Home() {
 			<section className="case-studies-section">
 				<h2>Case studies</h2>
 				<div className="case-cards-container">
-					<div className="case-card">
-						<div className="header-case-card">
-							<img src="/logos/mypop_logo.svg" alt="logo MyPop" />
-							<figcaption>Fullstack</figcaption>
-						</div>
-						<div className="case-card-core">
-							<p className="year">2024</p>
-							<h3>
-								MyPop: A Modern, Automated, Self-Service Car Rental Platform for
-								Flexible Mobility
-							</h3>
-							<p className="case-content">
-								We collaborated with MyPop, a Belgian car rental service focused
-								on flexible, long-term rentals, to develop a cutting-edge web
-								platform that redefines the car rental experience. This solution
-								empowers users with self-service subscriptions, integrates
-								seamlessly with car delivery APIs, and provides real-time
-								vehicle tracking through sensor data. Built with a custom
-								vanilla Node.js and TypeScript backend and a Next.js frontend
-								powered by Prismic, the platform also introduces an innovative
-								OCR and AI-driven fine management system. An admin back office
-								equips MyPop’s team with robust tools to oversee subscriptions,
-								fleet management, and operations.
-							</p>
-						</div>
-					</div>
-					<div className="case-card">
-						<div className="header-case-card">
-							<img
-								src="/logos/taxis_verts_logo.svg"
-								alt="logo Taxis Verts"
-								id="taxi-verts"
-							/>
-							<figcaption>Mobile</figcaption>
-						</div>
-						<div className="case-card-core">
-							<p className="year">2023</p>
-							<h3>
-								Collecto App Revamp: A Modern Shared Taxi Solution in Just Two
-								Weeks
-							</h3>
-							<p className="case-content">
-								We teamed up with Taxi Verts and the Brussels government to
-								rebuild the Collecto app from the ground up, delivering a
-								modernized shared taxi service for Brussels residents. In an
-								ambitious two-week timeline, we transformed the app with a fresh
-								design, in-app payments, and enhanced functionality, elevating
-								its App Store rating from 2 stars to 4.6 stars.
-							</p>
-						</div>
-					</div>
-					<div className="case-card" id="last">
-						<div className="header-case-card">
-							<img src="/logos/mypop_logo.svg" alt="logo My Pop" />
-							<figcaption>AI</figcaption>
-						</div>
-						<div className="case-card-core">
-							<p className="year">2021</p>
-							<h3>Vehicle Fine Processing Automation</h3>
-							<p className="case-content">
-								Developed an automated fine-processing system that transforms
-								time-consuming manual work into an instant process. Using Google
-								Vision and OpenAI, the solution automatically extracts key data
-								(license plates, dates, amounts) from PDF fines and matches them
-								with the correct vehicle renters, enabling immediate fine
-								forwarding while maintaining high accuracy.
-							</p>
-						</div>
-					</div>
+					{caseCardContent.map((item, index) => (
+						<CaseCard
+							key={index}
+							img={item.img}
+							figcaption={item.figcaption}
+							year={item.year}
+							title={item.title}
+							description={item.description}
+						/>
+					))}
 				</div>
 			</section>
 			<section className="booking-section">
